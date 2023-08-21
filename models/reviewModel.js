@@ -10,3 +10,4 @@ module.exports=(sequelize,DataTypes)=>{
     })
     return Review;
 }
+//timestamps = creatupdta at

@@ -40,7 +40,7 @@ const getOneProduct= async(req,res)=>{
 const updateProduct= async(req,res)=>{
    
     const id = req.params.id
-    const product=await Product.Update(req.body,{where:{id}})
+    const product=await Product.update(req.body,{where:{id}})
     res.status(200).send(product)
 
 }
@@ -56,8 +56,8 @@ const deleteProduct= async(req,res)=>{
 
 //6-delete produc by id
 const getPublishedProduct= async(req,res)=>{
-   
-    const products=await Product.destroy({where:{published:true}})
+
+    const products=await Product.findAll({where:{published:true}})
     res.status(200).send(products)
 }
 
